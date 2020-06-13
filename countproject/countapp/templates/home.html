@@ -1,0 +1,109 @@
+﻿
+<!doctype html>
+
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+   <title>word count</title>
+  </head>
+    <style>
+        body {
+            width:100%;height:100%;
+            background-image:url('https://wallpaperaccess.com/full/941788.jpg');
+            background-repeat: no-repeat;background-size:cover;
+        }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color:#141414;
+        opacity: 0.8;
+    }
+    ul:after{
+        content:'';
+        display: block;
+        clear:both;
+    }
+    li {
+        float: left;
+    }
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+
+
+        #about {
+            color:#f4f4f4 ;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-align: center;
+        }
+        h1 {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #f4f4f4;
+            text-align: center;
+            padding-top: 10px;
+        }
+        h5 {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #f4f4f4;
+            text-align: center;
+
+        }
+        textarea {
+            font-size: 13px;
+            color: #141414;
+            margin:0px auto;
+            display: block;
+            width: 10cm;
+            height: 8cm;
+        }
+        #btn {
+            
+            margin:0px auto;
+            margin-top: 1px;
+            border-radius: 16px;
+            color: #8458b3;
+            background-color: #f4f4f4;
+            border-width: 2px;
+            border-color:#8458b3;
+            width: 100px;
+            height:1cm;
+            display: block;
+
+        }
+            
+    
+    
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+           
+            <nav>
+                <ul class="menu">
+                    <li><a href="{% url 'home' %}">home</a></li>
+                    <li><a href="{% url 'about' %}">about</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <h1>Word Count</h1>
+    >
+    <h5>Start typing, or copy and paste your text here...</h5>
+    <form action="{% url 'count' %}">
+    <br>
+    <textarea cols=40 rows=20 name='fulltext'></textarea>
+    <br>
+   
+    <input id="btn" type="submit" value="Count!">
+    </form>
+    </body>
+        
+ 
